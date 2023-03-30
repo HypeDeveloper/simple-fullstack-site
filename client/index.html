@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Users</title>
+    <style>
+        body{
+            margin: 40px;
+        }
+        *{
+            margin: 0;
+            color: inherit;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button{
+            padding: 11px 18px;
+            border: none;
+            outline: none;
+            background: rgb(43, 168, 226);
+            border-radius: 10px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        input{
+            height: 30px;
+            width: 500px;
+            outline: none;
+            border: none;
+            background: none;
+            color: white;
+        }
+        .inputSection{
+            background: black;
+            color: white;
+            border-radius: 10px;
+            padding: 8px 20px;
+            width: fit-content;
+        }
+        .warning{
+            margin-left: 20px;
+            background: rgb(226, 43, 43);
+        }
+        .userCount{
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .userCount li{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .action{
+            display: flex;
+        }
+        .subtext{
+            padding: 20px 0 60px;
+        }
+        .actions h2{
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Names Of Noise Makers</h1>
+        <p class="subtext">type the name of the noise maker and click add name to add to list</p>
+        <form class="inputSection">
+            <input  placeholder="Name of Noise Maker" required type="text" id="nameCreate" maxlength="50">
+            <button type="submit" id="subButton">Add Name</button>
+        </form>
+        <div class="userCount" id="userList">
+            <li>
+                
+                <h2>Noise Maker</h2>
+                <div class="actions">
+                    <h2>Actions</h2>
+                </div>
+            </li>
+        </div>
+    </div>
+</body>
+
+<script src="handleUsers.js"></script>
+</html>
