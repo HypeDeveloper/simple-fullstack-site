@@ -23,7 +23,7 @@ bttnSubmit.addEventListener('click', (e)=>{
 })
 
 
-function UpdateUi(name){
+function UpdateUi(name, id){
     // Ceate the nodes [the html elements]
     const parent = document.createElement('li')
     const text = document.createElement('h2')
@@ -31,6 +31,8 @@ function UpdateUi(name){
     const updateButton = document.createElement('button')
     const delButton = document.createElement('button')
 
+    // parent attb
+    parent.id = id
     // styles
     delButton.classList.add('warning')
     actionGroup.classList.add('actions')
@@ -42,7 +44,7 @@ function UpdateUi(name){
     // button Actions
     delButton.onclick = (e)=>{
         delUser({
-            id: 'id'
+            id: id
         }, ()=>{
              // Hiding the name when del is clicked
             parent.style.display = 'none'
@@ -52,7 +54,7 @@ function UpdateUi(name){
     updateButton.onclick = (e)=>{
         const newName = prompt('Add a new Name')
         putUser({
-            id: 'id',
+            id: id,
             newName: newName
         }, ()=>{
             // Using the prompt function  to get the new name
@@ -75,7 +77,9 @@ function getUsers(){
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
-            UpdateUi(data.user)
+            data.names.forEach(element => {
+                UpdateUi(element.name, element._id)
+            });
         });
 }
 
@@ -90,7 +94,7 @@ function postUser(data){
             .then((response) => response.json())
             .then((data) => {
                 console.log("Success:", data);
-                UpdateUi(data.newNoiseMaker)
+                UpdateUi(data.newNoiseMaker, data.id)
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -98,7 +102,7 @@ function postUser(data){
 }
 
 function putUser(data, callback){
-    fetch("http://localhost:4044/api/user/addUser", {
+    fetch("http://localhost:4044/api/user/updUser", {
             method: "PUT", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",
@@ -115,8 +119,9 @@ function putUser(data, callback){
             });
 }
 function delUser(data, callback){
-    fetch("http://localhost:4044/api/user/addUser", {
-            method: "POST", // or 'PUT'
+    console.log(data);
+    fetch("http://localhost:4044/api/user/delUser", {
+            method: "DELETE", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",
             },

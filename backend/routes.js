@@ -8,8 +8,10 @@ const router = express.Router()
 
 
 const getUsers = expressAsyncHandler(async(req, res)=>{
+    const users = await User.find()
     res.status(200).json({
-        user: 'punk'
+        message: 'Found list',
+        names: users
     })
 })
 
@@ -25,11 +27,13 @@ const addUser = expressAsyncHandler(async(req, res)=>{
         })
     }
 
-    const NoiseMake = User.create({
-        name: name
+    const NoiseMake = await User.create({
+        name: name,
     })
+
     if(NoiseMake){
         res.status(200).json({
+            id: NoiseMake._id,
             newNoiseMaker: NoiseMake.name,
             message: 'added to the db list'
         })
@@ -40,14 +44,14 @@ const updateUser = expressAsyncHandler(async(req, res)=>{
     const {id, newName} = req.body
 
     // validate Response
-    if(!id || !newName){
+    if(id == '' || newName == ''){
         console.log("no id or name given");
         res.status(400).json({
             message: 'error: No id or name Given'
         })
     }
 
-    const NoiseMake = User.findByIdAndUpdate(id, {name: newName})
+    const NoiseMake = await User.findByIdAndUpdate(id, {name: newName})
     if(NoiseMake){
         res.status(200).json({
             UpdateID: NoiseMake._id,
@@ -65,14 +69,14 @@ const delUser = expressAsyncHandler(async(req, res)=>{
     const {id} = req.body
 
     // validate Response
-    if(!id){
+    if(id == ''){
         console.log("no id given");
         res.status(400).json({
             message: 'error: No id Given'
         })
     }
 
-    const NoiseMake = User.findByIdAndDelete(id)
+    const NoiseMake = await User.findByIdAndDelete(id)
     if(NoiseMake){
         res.status(200).json({
             UpdateID: NoiseMake._id,
