@@ -2,12 +2,16 @@ const bttnSubmit = document.getElementById('subButton')
 const createName = document.getElementById('nameCreate')
 const userList = document.getElementById('userList')
 
+
+// Get all registered user
+getUsers()
+
 bttnSubmit.addEventListener('click', (e)=>{
     e.preventDefault()
     // check for blank name error
     if(createName.value != ''){
         // run Update Ui
-        UpdateUi(createName.value)
+        postUser({name:createName.value})
     }
     else{
         alert('Name Can Not Be Blank')
@@ -37,13 +41,23 @@ function UpdateUi(name){
 
     // button Actions
     delButton.onclick = (e)=>{
-        // Hiding the name when del is clicked
-        parent.style.display = 'none'
+        delUser({
+            id: 'id'
+        }, ()=>{
+             // Hiding the name when del is clicked
+            parent.style.display = 'none'
+        })
+       
     }
     updateButton.onclick = (e)=>{
-        // Using the prompt function  to get the new name
         const newName = prompt('Add a new Name')
-        text.innerText = newName
+        putUser({
+            id: 'id',
+            newName: newName
+        }, ()=>{
+            // Using the prompt function  to get the new name
+            text.innerText = newName
+        })
     }
 
     // update name
@@ -54,4 +68,66 @@ function UpdateUi(name){
     parent.appendChild(actionGroup)
     actionGroup.append(updateButton)
     actionGroup.append(delButton)
+}
+
+function getUsers(){
+    fetch("http://localhost:4044/api/user")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            UpdateUi(data.user)
+        });
+}
+
+function postUser(data){
+    fetch("http://localhost:4044/api/user/addUser", {
+            method: "POST", // or 'PUT'
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Success:", data);
+                UpdateUi(data.newNoiseMaker)
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+}
+
+function putUser(data, callback){
+    fetch("http://localhost:4044/api/user/addUser", {
+            method: "PUT", // or 'PUT'
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Success:", data);
+                callback()
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+}
+function delUser(data, callback){
+    fetch("http://localhost:4044/api/user/addUser", {
+            method: "POST", // or 'PUT'
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Success:", data);
+                callback()
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
 }
