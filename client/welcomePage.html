@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Site</title>
+    <title>Welcome user</title>
     <style>
         *{
             margin: 0;
@@ -18,9 +18,9 @@
             height: 100vh;
         }
         .container{
-            gap: 30px;
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
         }
         button{
@@ -32,17 +32,22 @@
             font-weight: 500;
             border-radius: 6px;
         }
+
+        .bttnWrap{
+            margin-top: 40px;
+        }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h1>Welcome To My Simple Site</h1>
-        <div class="center">
-            <a href="./signup.html">
-                <button>Sign Up</button>
-            </a>
+        
+        <h3> Hello </h3>
+        <h1  class="info"> Username </h1>
+        <p class="info"> email </p>
+        <div class="bttnWrap">
+            <button id="logoutbttn">Logout</button>
         </div>
     </div>
 </body>
+<script src="./handleUser.js"></script>
 </html>
