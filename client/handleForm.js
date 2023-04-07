@@ -2,6 +2,7 @@ const getForm = document.getElementById('formSignUp')
 const getFormIn = document.getElementById('formSignIn')
 const bttnSignUp = document.getElementById('bttnSignUp')
 
+const baseUrl  = 'https://restate-pink.vercel.app/'
 
 if(getForm){
     getForm.addEventListener('submit', (e)=>{
@@ -18,7 +19,7 @@ if(getForm){
             alert('password does not match')
             return
         }else{
-            fetch("http://localhost:4044/api/user/addUser", {
+            fetch(baseUrl+"api/user/addUser", {
                 method: "POST", // or 'PUT'
                 headers: {
                     "Content-Type": "application/json",
@@ -52,7 +53,7 @@ else{
         }
     
         
-        fetch("http://localhost:4044/api/user/logUser", {
+        fetch(baseUrl+"api/user/logUser", {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",
