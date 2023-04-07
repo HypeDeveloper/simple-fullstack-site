@@ -1,48 +1,732 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Site</title>
-    <style>
-        *{
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-		body{
-            zoom: 96%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .container{
-            gap: 30px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-        button{
-            background-color: black;
-            padding: 10px 20px;
-            color: white;
-            border: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            border-radius: 6px;
-        }
-    </style>
+    <title>R.Estate Welcome to Home</title>
+    <!--header icon-->
+    <link rel="icon" href="./assets/img/papa.jpg">
+    <link rel="apple-touch-icon" href="./assets/img/papa.jpg">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <!--Boostrap core CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <!--Swiper JS CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- MDB  CDN CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <div class="container">
-        <h1>Welcome To My Simple Site</h1>
-        <div class="center">
-            <a href="./signup.html">
-                <button>Sign Up</button>
-            </a>
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <!--Header Here-->
+    <header class="header">
+        <div class="container">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><span class="color-primary">R.</span>Estate</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="fas fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="basicExampleNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="index.html"><span class="color-primary">Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="resources.html">Resources</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="buildings.html">Buildings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="areas.html">Areas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/signup.html"><button class="btn btn-theme">Get Started</button></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </div>
+    </header>
+    <!--Header Close Here-->
+
+    <!--Hero Banner Here-->
+    <section id="hero-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 my-auto mr-auto">
+                    <h1 class="h1 h1 responsive" data-aos="fade-up" data-aos-delay="200">Find Your Next Perfect Place of
+                        Living</h1>
+                    <p data-aos="fade-right" data-aos-delay="300">In expecting display thought. Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. </p>
+                    <button class="btn btn-theme2" data-aos="fade-up" data-aos-delay="200">Learn More</button>
+                    <a href="https://www.youtube.com/watch?v=4jnzf1yj48M&feature=youtu.be"><button
+                            class="btn btn-play ms-3" data-aos="fade-up" data-aos-delay="200"><i
+                                class="fas fa-play"></i></a>
+                </div>
+                <div class="col-lg-5 col-md-7 ms-auto my-md-auto my-4">
+                    <div class="image">
+                        <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.45.jpeg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero Banner Close Here-->
+
+    <!--Search Section Here-->
+    <section id="search-section" data-aos="fade-up" data-aos-delay="200">
+        <div class="container">
+            <div class="col-lg-11 mx-auto search-area shadow">
+                <div class="row">
+                    <div class="col-md-3">
+                        <select name="" id="">
+                            <option value="">Location</option>
+                            <option value="">Location</option>
+                            <option value="">Location</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Location">
+                    </div>
+                    <div class="col-md-3">
+                        <select name="" id="">
+                            <option value="">Property Type</option>
+                            <option value="">Type 1</option>
+                            <option value="">Type 2</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Property Type">
+                    </div>
+                    <div class="col-md-3">
+                        <select name="" id="">
+                            <option value="">Max Price</option>
+                            <option value="">Min Price</option>
+                            <option value="">Average</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="$6,5000">
+                    </div>
+                    <div class="col-lg-2 col-md-3 ms-auto my-auto">
+                        <a href="areas.html"><button class="btn btn-theme">Search</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </section>
+    <!--Search Section Close Here-->
+
+    <!--About Section Here-->
+    <section id="about-section">
+        <div class="container">
+            <div class="row align-item-center justify-content-between">
+                <div class="col-lg-6 my-auto">
+                    <div class="image" data-aos="fade-right" data-aos-delay="200">
+                        <img src="assets/img/WhatsApp Image 2023-03-22 at 13.08.55.jpeg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 pl-lg-5 px-4 mt-md-0 mt-5 my-auto" data-aos="fade-left"
+                    data-aos-delay="200">
+                    <h6 style="color: var(--color-primary);">About us</h6>
+                    <h1 class="h1 h1-responsive md-4">We Provide The Best Property For You!</h1>
+                    <p>I had the pleasure of collaborating with House Motive in order to rent my property. I was
+                        followed in a professional manner </p>
+                    <p>and with total availability throughout the search and
+                        bureaucratic process for the rental. I recommend her!</p>
+                    <button class="btn btn-theme2">Learn More</button>
+                    <a href="https://www.youtube.com/watch?v=4jnzf1yj48M&feature=youtu.be"><button
+                            class="btn btn-play ms-2"><i class="fas fa-play"></i></button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Section Close Here-->
+
+    <!--Service Section Here-->
+    <section id="service-section" data-aos="zoom-in-up" data-aos-delay="200">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="shadow service-show" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-user"></i>
+                    <h4 class="h5">Make Your Dream True</h4>
+                    <p>The excitement of dreams coming true is beyond the description of words.</p>
+                </div>
+                <div class="shadow service-show" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-desktop"></i>
+                    <h4 class="h5">Start Your Membership</h4>
+                    <p>You are never too old to start over. <br>Every day is a chance to make changes to create the life
+                        we want.</p>
+                </div>
+                <div class="shadow service-show" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-house"></i>
+                    <h4 class="h5">Enjoy Your New Home</h4>
+                    <p>Wishing you lots of love and happiness in your new home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Service Section Close Here-->
+
+    <!--Property Section Here-->
+    <section id="property-section" data-aos="fade-up" data-aos-delay="200">
+        <div class="container">
+            <h6 class="color-primary">Recent</h6>
+            <h1 class="h1 h1-responsive md-4">Recently Added Properties</h1>
+            <div class="text-end">
+                <a href="#">Find More Project<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <!--Property List Silder Here-->
+            <div id="property-silder">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper col-lg-4 col-md-6 mx-auto">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="property-list shadow">
+                                <div class="image3">
+                                    <img src="assets/img/WhatsApp Image 2023-03-22 at 13.08.55 (1).jpeg" class=""
+                                        alt="">
+                                </div>
+                                <div class="text-end">
+                                    <h4 class="h5">$10,990</h4>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="item mt-4">
+                                        <h4 class=" h5 mt-0">Palace</h4>
+                                        <p class="mt-6">City Country</p>
+                                    </div>
+                                    <div class="item d-flex align-self-center my-price1">
+                                        <i class="fa fa-bed mx-2 align-self-center"
+                                            style="color: var(--color-secondary);"></i>
+                                        <span>5</span>
+                                        <i class="fa fa-bath mx-2 align-self-center"
+                                            style="color: var(--color-secondary); "></i>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-list shadow">
+                                <div class="image3">
+                                    <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.44 (1).jpeg" class=""
+                                        alt="">
+                                </div>
+                                <div class="text-end">
+                                    <h4 class="h5">$12,990</h4>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="item mt-4">
+                                        <h4 class=" h5 mt-0">Palace</h4>
+                                        <p class="mt-6">City Country</p>
+                                    </div>
+                                    <div class="item d-flex align-self-center my-price1">
+                                        <i class="fa fa-bed mx-2 align-self-center"
+                                            style="color: var(--color-secondary);"></i>
+                                        <span>5</span>
+                                        <i class="fa fa-bath mx-2 align-self-center"
+                                            style="color: var(--color-secondary); "></i>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-list shadow">
+                                <div class="image3">
+                                    <img src="assets/img/WhatsApp Image 2023-03-22 at 13.08.56.jpeg" class="" alt="">
+                                </div>
+                                <div class="text-end">
+                                    <h4 class="h5">$14,850</h4>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="item mt-4">
+                                        <h4 class=" h5 mt-0">Palace</h4>
+                                        <p class="mt-6">City Country</p>
+                                    </div>
+                                    <div class="item d-flex align-self-center my-price1">
+                                        <i class="fa fa-bed mx-2 align-self-center"
+                                            style="color: var(--color-secondary);"></i>
+                                        <span>5</span>
+                                        <i class="fa fa-bath mx-2 align-self-center"
+                                            style="color: var(--color-secondary); "></i>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-list shadow">
+                                <div class="image3">
+                                    <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.44.jpeg" class="" alt="">
+                                </div>
+                                <div class="text-end">
+                                    <h4 class="h5">$20,000</h4>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="item mt-4">
+                                        <h4 class=" h5 mt-0">Palace</h4>
+                                        <p class="mt-6">City Country</p>
+                                    </div>
+                                    <div class="item d-flex align-self-center my-price1">
+                                        <i class="fa fa-bed mx-2 align-self-center"
+                                            style="color: var(--color-secondary);"></i>
+                                        <span>5</span>
+                                        <i class="fa fa-bath mx-2 align-self-center"
+                                            style="color: var(--color-secondary); "></i>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-list shadow">
+                                <div class="image3">
+                                    <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.45.jpeg" class="" alt="">
+                                </div>
+                                <div class="text-end">
+                                    <h4 class="h5">$15,320</h4>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="item mt-4">
+                                        <h4 class=" h5 mt-0">Palace</h4>
+                                        <p class="mt-6">City Country</p>
+                                    </div>
+                                    <div class="item d-flex align-self-center my-price1">
+                                        <i class="fa fa-bed mx-2 align-self-center"
+                                            style="color: var(--color-secondary);"></i>
+                                        <span>5</span>
+                                        <i class="fa fa-bath mx-2 align-self-center"
+                                            style="color: var(--color-secondary); "></i>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-list shadow">
+                                <div class="image3">
+                                    <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.45 (1).jpeg" class=""
+                                        alt="">
+                                </div>
+                                <div class="text-end">
+                                    <h4 class="h5">$19,654</h4>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="item mt-4">
+                                        <h4 class=" h5 mt-0">Palace</h4>
+                                        <p class="mt-6">City Country</p>
+                                    </div>
+                                    <div class="item d-flex align-self-center my-price1">
+                                        <i class="fa fa-bed mx-2 align-self-center"
+                                            style="color: var(--color-secondary);"></i>
+                                        <span>5</span>
+                                        <i class="fa fa-bath mx-2 align-self-center"
+                                            style="color: var(--color-secondary); "></i>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Property List Silder Close Here-->
+        </div>
+    </section>
+    <!--Property Section Close Here-->
+
+    <!--Work Section Here-->
+    <section id="work-section" data-aos="zoom-in-down" data-aos-delay="200">
+        <div class="container">
+            <h6 class="color-primary">Work</h6>
+            <h1 class="h1 h1-responsive md-4">How it work</h1>
+            <p>It is not the beauty of a building you should look at; <br>its the construction of the foundation that
+                will stand the test of time!</p>
+
+            <div class="d-flex justify-content-between my-5">
+                <div class="shadow service-show" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-search"></i>
+                    <h4 class="h5 mb-4">Find Home</h4>
+                    <p>Home is the starting place of love, hope and dreams...</p>
+                </div>
+                <div class="shadow service-show" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-users"></i>
+                    <h4 class="h5 mb-4">Meet Roommates</h4>
+                    <p>You are never too old to start over. <br>Every day is a chance to make changes to create the life
+                        we want.</p>
+                </div>
+                <div class="shadow service-show" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-sharp fa-solid fa-shield-halved"></i>
+                    <h4 class="h5 mb-4">Make it Official</h4>
+                    <p>The greatest glory in living lies not in never falling, <br>but in rising every time we fall.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Work Section Close Here-->
+
+    <!--Feature Property Here-->
+    <section id="feature-section" data-aos="fade-up" data-aos-delay="200">
+        <div class="container">
+            <h6 class="color-primary m-0">Recent</h6>
+            <h1 class="h1 h1-responsive md-4">Our Featured Properties</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Lorem ipsum dolor sit amet consectetur!</p>
+            <br>
+            <div class="col-md-11 mx-auto text-start">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mx-auto my-3">
+                        <div class="property-list shadow">
+                            <div class="image4">
+                                <img src="assets/img/WhatsApp Image 2023-03-22 at 13.08.55 (1).jpeg" class="" alt=""
+                                    data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                            <div class="text-end">
+                                <h4 class="h5">$23,764</h4>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="item mt-4 my-p">
+                                    <h4 class=" h5 mt-0">Palace</h4>
+                                    <p class="mt-6">Pasadena</p>
+                                </div>
+                                <div class="item d-flex  align-self-center my-price">
+                                    <i class="fa fa-bed mx-2 align-self-center"
+                                        style="color: var(--color-secondary);"></i>
+                                    <span>5</span>
+                                    <i class="fa fa-bath mx-2 align-self-center"
+                                        style="color: var(--color-secondary); "></i>
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mx-auto my-3">
+                        <div class="property-list shadow">
+                            <div class="image4">
+                                <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.44.jpeg" class="" alt=""
+                                    data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                            <div class="text-end">
+                                <h4 class="h5">$26,765</h4>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="item mt-4">
+                                    <h4 class=" h5 mt-0">Palace</h4>
+                                    <p class="mt-6">Agoura Hills</p>
+                                </div>
+                                <div class="item d-flex align-self-center my-price">
+                                    <i class="fa fa-bed mx-2 align-self-center"
+                                        style="color: var(--color-secondary);"></i>
+                                    <span>8</span>
+                                    <i class="fa fa-bath mx-2 align-self-center"
+                                        style="color: var(--color-secondary); "></i>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mx-auto my-3">
+                        <div class="property-list shadow">
+                            <div class="image4">
+                                <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.45.jpeg" class="" alt=""
+                                    data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                            <div class="text-end">
+                                <h4 class="h5">$12,905</h4>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="item mt-4">
+                                    <h4 class=" h5 mt-0">Palace</h4>
+                                    <p class="mt-6">Hermosa Beach</p>
+                                </div>
+                                <div class="item d-flex align-self-center my-price">
+                                    <i class="fa fa-bed mx-2 align-self-center"
+                                        style="color: var(--color-secondary);"></i>
+                                    <span>9</span>
+                                    <i class="fa fa-bath mx-2 align-self-center"
+                                        style="color: var(--color-secondary); "></i>
+                                    <span>6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mx-auto my-3">
+                        <div class="property-list shadow">
+                            <div class="image4">
+                                <img src="assets/img/WhatsApp Image 2023-03-22 at 13.08.56 (1).jpeg" class="" alt=""
+                                    data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                            <div class="text-end">
+                                <h4 class="h5">$24,864</h4>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="item mt-4">
+                                    <h4 class=" h5 mt-0">Palace</h4>
+                                    <p class="mt-6">Atherton</p>
+                                </div>
+                                <div class="item d-flex align-self-center my-price">
+                                    <i class="fa fa-bed mx-2 align-self-center"
+                                        style="color: var(--color-secondary);"></i>
+                                    <span>7</span>
+                                    <i class="fa fa-bath mx-2 align-self-center"
+                                        style="color: var(--color-secondary); "></i>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mx-auto my-3">
+                        <div class="property-list shadow">
+                            <div class="image4">
+                                <img src="assets/img/WhatsApp Image 2023-03-22 at 13.08.56.jpeg" class="" alt=""
+                                    data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                            <div class="text-end">
+                                <h4 class="h5">$23,864</h4>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="item mt-4">
+                                    <h4 class=" h5 mt-0">Palace</h4>
+                                    <p class="mt-6">Hidden Hills</p>
+                                </div>
+                                <div class="item d-flex align-self-center my-price">
+                                    <i class="fa fa-bed mx-2 align-self-center"
+                                        style="color: var(--color-secondary);"></i>
+                                    <span>5</span>
+                                    <i class="fa fa-bath mx-2 align-self-center"
+                                        style="color: var(--color-secondary); "></i>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mx-auto my-3">
+                        <div class="property-list shadow">
+                            <div class="image4">
+                                <img src="assets/img/WhatsApp Image 2023-03-24 at 11.21.44 (1).jpeg" class="" alt=""
+                                    data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                            <div class="text-end">
+                                <h4 class="h5">$12,788</h4>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="item mt-4">
+                                    <h4 class=" h5 mt-0">Palace</h4>
+                                    <p class="mt-6">Los Angeles</p>
+                                </div>
+                                <div class="item d-flex align-self-center my-price">
+                                    <i class="fa fa-bed mx-2 align-self-center"
+                                        style="color: var(--color-secondary);"></i>
+                                    <span>7</span>
+                                    <i class="fa fa-bath mx-2 align-self-center"
+                                        style="color: var(--color-secondary); "></i>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-5 text-center">
+                    <button class="btn btn-theme">Load More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Feature Property Close Here-->
+
+    <!--Testimonial Section Here-->
+    <section id="testimonial-section">
+        <div class="container">
+            <h6 class="color-primary ">Testimonial</h6>
+            <h1 class="h1 h1-responsive md-4" style="color: var(--color-secondary);">What They Are Saying</h1>
+            <p>What people say, what people do, and what they say they do are entirely different things!</p>
+            <br><br>
+            <div id="testmonial-silder">
+                <div class="swiper1">
+                    <div class="swiper-wrapper1">
+                        <div class="swiper-slide1">
+                            <div class="testimonial-list">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-4 text-center mx-auto mr-auto ">
+                                        <div class="image5" data-aos="fade-right" data-aos-delay="200">
+                                            <img src="assets/img/WhatsApp Image 2023-03-30 at 15.50.42.jpeg"
+                                                class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="offset-lg-1 col-lg-6 col-md-8 pl-5 my-auto mr-auto text-start"
+                                        data-aos="fade-left" data-aos-delay="200">
+                                        <i class="fa fa-quote-left fa-8x"></i>
+                                        <p>I'm glad I found Tony to help me buy a home. He walked me through the pros
+                                            and cons of every step in my home buying journey so that I could make great
+                                            choices. In fact,
+                                            we worked together during a very competitive time in the market where
+                                            multiple bids were the norm, something I hadn't expected! </p>
+                                        <h4 class="h4 m-0" style="color: red;">Instagram</h4>
+                                        <p>@_future_exchange</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Testimonial Section Close Here-->
+
+    <!--Mail Section Here-->
+    <section id="mail-section" data-aos="fade-up" data-aos-delay="200">
+        <div class="container">
+            <h1 class="h1 h1-responsive md-4" style="color: var(--color-secondary);">Have Question in Mind?<br>Let us
+                help you</h1>
+            <div class="col-lg-8 col-md-11 mx-auto form shadow mt-3">
+                <div class="row justify-content-between">
+                    <div class="col-md-9 my-auto">
+                        <input type="text" class="form-control" placeholder="yourmail@domain.com">
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <button class="btn btn-theme">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Mail Section Close Here-->
+
+    <!--Footer Section Here-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 my-lg-auto my-4">
+                    <a href="index.html">
+                        <h4 class="h4">R.Estate</h4>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-auto my-4">
+                    <h6 class="m-0 h6">Quick Link</h6>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Agency</a></li>
+                        <li><a href="#">Asset Voluation</a></li>
+                        <li><a href="#">Buildings</a></li>
+                        <li><a href="#">Business Rates</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-auto my-4">
+                    <h6 class="m-0 h6">Locations</h6>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Agency</a></li>
+                        <li><a href="#">Asset Voluation</a></li>
+                        <li><a href="#">Buildings</a></li>
+                        <li><a href="#">Business Rates</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class="m-0 h6">Services</h6>
+                    <hr style="color: #fff;">
+                    <ul>
+                        <li><a href="#">Properties</a></li>
+                        <li><a href="#">Acution</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="m-0 h6">Contact</h6>
+                    <hr style="color: #fff;">
+                    <ul>
+                        <li>+1 (531)468-6421</li>
+                        <li>valentinechinaza011@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="minor">
+            Copyright &copy; 2023 R. ESTATE. All rights reserved. Designed by<a href="https://restate.com"> <span
+                    style="color: ghostwhite">R. Estate</span></a>
+        </div>
+    </footer>
+    <!--Footer Section Close Here-->
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+
+        });
+    </script>
 </body>
+
 </html>
+<!--JQuery-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.slim.min.js"></script>
+<!--Boostrap tooltips-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+<!--Boostrap core JavaScript-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+<!--Swiper JS JavaScript-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- MDB CDN JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
+    var Myswiper = new MySwiper('.swiper', {
+        // Optional parameters
+        loop: true
+    });
+</script>
