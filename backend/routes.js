@@ -159,6 +159,8 @@ const delUser = expressAsyncHandler(async(req, res)=>{
     }
 })
 
+
+
 router.get('/user/', getUsers)
 router.post('/user/addUser', addUserInfo)
 router.post('/user/logUser', logUser)
