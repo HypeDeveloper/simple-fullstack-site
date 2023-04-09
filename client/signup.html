@@ -44,50 +44,40 @@
             align-items: center;
         }
 
-        .header {
-            width: 100%;
-            background-color: rgb(156, 209, 252);
-            top: 0;
-            z-index: 1000;
-            position: fixed;
-            width: 100%;
-
+        /* Color Variables*/
+        :root {
+            --color-primary: #2289ff;
+            --color-secondary: #814862 !important;
+            --color-acent: #193F6A;
+            --font-poppin: 'Poppins', serif
         }
 
-        .navbar {
-            box-shadow: none;
+
+        /*Custom classes*/
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+
+        .color-primary {
+            color: var(--color-primary)
+        }
+
+        .bg-secondary {
+            background-color: var(--color-secondary);
+        }
+
+        .color-secondary {
             color: var(--color-secondary);
-
-
-
         }
 
-        .navbar-brand {
-            font-family: var(--font-poppin);
-            font-weight: 500;
-            font-size: 20px;
-            color: var(--color-secondary);
-
+        .bg-acent {
+            background-color: var(--color-acent);
         }
 
-        .nav-item {
-            margin: auto 5px;
-
-
+        .color-acent {
+            color: var(--color-acent);
         }
 
-        .nav-link {
-            font-family: var(--font-poppin);
-            color: ghostwhite;
-            padding: 10px 20px;
-            transition: 0.5s ease;
-
-
-        }
-
-        a.nav-link:hover {
-            color: var(--color-primary);
-        }
 
         button {
             background-color: rgb(41, 84, 224);
@@ -126,14 +116,15 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><span class="color-primary">R.</span>Estate</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#basicExampleNav"
-                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="fas fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="basicExampleNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item ">
-                            <a class="nav-link " href="index.html">Home</a>
+                            <a class="nav-link " href="index.html"><span class="color-primary">Home</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="resources.html">Resources</a>
@@ -148,15 +139,14 @@
                             <a class="nav-link" href="contact-us.html">Contact us</a>
                         </li>
                         <li class="nav-item">
-
+                            <a href="/signup.html"><button class="btn btn-theme">Get Started</button></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="container">
-        </div>
+       
 
     </header>
     <!--Header Close Here-->
