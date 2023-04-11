@@ -160,9 +160,8 @@ html {
 .navbar-brand {
   font-family: var(--font-poppin);
   font-weight: 500;
-  font-size: 20px;
   color: var(--color-secondary);
-
+  zoom: 140%;
 }
 
 .nav-item {

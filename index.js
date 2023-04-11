@@ -5,7 +5,6 @@ const { connectDB } = require('./backend/config/db');
 var path = require('path');
 const port = process.env.PORT || 8000;
 
-connectDB()
 
 // inti express
 const app = express()
@@ -36,4 +35,5 @@ app.listen(port, () => {
     console.log(`SERVER: listening on port ${port}`);
 })
 
+connectDB()
 module.exports = app
